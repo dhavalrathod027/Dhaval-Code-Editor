@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+.nav-left>img{
+    height: 60px;
+    border-radius: 50px;
+}
+
+nav .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+nav .title:hover{
+    color: #00ffff;
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: 0px 20px;
+    gap: 30px;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-right: 20px;
+}
+
+nav i{
+    font-size: 20px;
+}
+nav i:hover{
+    color: #00ffff;
+}
+
+.ri-menu-line{
+    font-size: 20px;
+    display:none;
+}
+
+
+main{
+    background-color: gray;
+    width: 100%;
+    display: flex;
+}
+
+.left{
+    flex-basis: 50%;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.right{
+    flex-basis: 50%;
+    height: calc(100vh - 70px);
+    padding: 15px;
+}
+
+.content{
+    flex-basis: 32%;
+    background-color: black;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.answer{
+    height: 100%;
+}
+
+.lang{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-start;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+i{
+    font-size: 20px;
+}
+
+.code{
+    background-color: black;
+}
+
+.ri-html5-fill{
+    color: #ff8c42;
+}
+.ri-css3-fill{
+    color: #00bfff;
+}
+.ri-javascript-fill{
+    color: #f2ff00;
+}
+
+.right h5{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+iframe{
+    background-color: #e0e0e0;
+    height: calc(100% - 30px);
+    width: 100%;
+}
+
+textarea {
+    flex: 1;
+    padding: 10px;
+    resize: none;
+    font-family: monospace;
+    font-size: 20px;    
+    width: 100%;
+    height: calc(203.2px - 26px);
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Custom Scrollbar for Textareas */
+
+textarea::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #ffffff33; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+#html::-webkit-scrollbar-thumb {
+    background-color: #ff8c42; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+#css::-webkit-scrollbar-thumb {
+    background-color: #00bfff;
+    border-radius: 10px; 
+}
+#javascript::-webkit-scrollbar-thumb {
+    background-color: #f2ff00;
+    border-radius: 10px; 
+}
+
+/* Responsive */
+
+@media(max-width: 768px) {
+    .ri-menu-line{
+        display:block;
+        padding: 0px 10px;
+    }
+
+    .nav-right{
+        display: none;
+        flex-direction: column;
+        padding: 50px;
+        opacity: 0;
+        transform: translateY(-20px); /* Slide element upwards initially */
+        transition: opacity 0.6s ease-in-out, transform 0.1s ease-in-out;
+    }
+
+    .nav-right.show{
+        display: flex;
+        opacity: 1;
+        transform: translateY(0); /* Slide down smoothly */
+    }
+
+    nav{
+        flex-direction: column;
+        align-items:stretch;
+    }
+
+    nav .title{
+        font-size: 15px;
+    }
+
+    .nav-left>img{
+        height: 40px;
+        border-radius: 50px;
+    }
+
+    main{
+        flex-direction: column;
+        width: 100%;
+        height: 200vh;
+    }
+
+    .left{
+        height:auto;
+        width: 100%;
+        flex-direction: column;
+        flex-basis: 32%;
+    }
+    .right{
+        height:auto;
+        width: 100%;
+    }
+}
+
+
+
